@@ -1,8 +1,7 @@
-import controller from './controllers/transactionController';
-import {validateTransaction} from './helpers';
+import controller from './controllers/programmes';
 
 const routes = (instance) => {
-    instance.get('/programmes', Auth.authPortal,controller.getTransactions);
+    instance.get('/programmes',controller.programmesCtrl);
 };
 
 export default routes;
