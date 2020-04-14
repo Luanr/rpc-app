@@ -1,10 +1,11 @@
-export const Programme = ((name, description, startDate, endDate, duration, imageUrl, type) => {
-  this.name = name;
-  this.description = description
-  this.startDate = startDate;
-  this.endDate = endDate;
-  this.duration = duration;
-  this.imageUrl = imageUrl;
-  this.category = category;
-  
+import schema from 'schm';
+
+export const Programme = schema({
+  name: String,
+  description: String,
+  startDate: String,
+  endDate: String,
+  duration: Number,
+  imageUrl: String,
+  category: String,
 });
