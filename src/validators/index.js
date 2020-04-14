@@ -1,5 +1,8 @@
 const { query } = require('schm-express')
 
 export const validateQuery = query({
-    day:
+    hour: {
+        type: Number,
+        required: true,
+    },
 });
