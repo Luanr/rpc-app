@@ -6,6 +6,5 @@ export const Programme = schema({
   startDate: String,
   endDate: String,
   duration: Number,
-  imageUrl: String,
   category: String,
 });
