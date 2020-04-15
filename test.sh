@@ -1,0 +1,1 @@
+curl -X GET 'http://127.0.0.1:3000/programmes?year=2020&month=2&day=2&hour=10&minute=20'
