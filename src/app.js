@@ -1,6 +1,5 @@
 import express from 'express';
 import routes from './routes';
-import sequelize from './database';
 import bodyParser from 'body-parser';
 
 const app = express();

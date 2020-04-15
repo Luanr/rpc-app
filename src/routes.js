@@ -1,7 +1,7 @@
-import controller from './controllers/programmes';
+import * as controllers from './controllers/programmes';
 
 const routes = (instance) => {
-    instance.get('/programmes',controller.programmesCtrl);
+    instance.get('/programmes',controllers.programmesCtrl);
 };
 
 export default routes;
