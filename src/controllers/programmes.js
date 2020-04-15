@@ -13,7 +13,8 @@ export const programmesCtrl = async (req, res) => {
             req.query.year, 
             req.query.month, 
             req.query.day, 
-            req.query.hour
+            req.query.hour,
+            req.query.minute
         );
         res.send(result);
     } catch(error) {
