@@ -1,7 +1,7 @@
 import {Programme} from '../models/programme';
 import axios from 'axios';
 
-export const getProgramsByDay = async (year, month, day, hour) => {
+export const getProgrammesByDate = async (year, month, day, hour) => {
     try {
         const queryResult = await globoApiCall(year, month, day);
         let result = [];
@@ -14,6 +14,7 @@ export const getProgramsByDay = async (year, month, day, hour) => {
                 duration: item.duration_in_minutes,
                 category: item.custom_info.Genero.Descricao,
             });
+
             result.push(programmeObj);
         }
         console.log(result)
@@ -29,9 +30,11 @@ const globoApiCall = async (year, month, day) => {
     return await axios.get(apiURL);
 }
 
-const checkProgrammeHour = (day, hour) => {
+const checkProgrammeHour = (month, day, hour) => {
     if(hour < 7) {
-        // check a day before
- 
+        // check a day before, refactor later
+        if (day == 1) {
+            return 31;
+        }
     }
 }
